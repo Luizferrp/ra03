@@ -1,9 +1,9 @@
-package mergesort;
+package algorithms;
 
 import java.util.Random;
-import mergesort.*;
+import estruturas.*;
 
-public class Main {
+class Main{
   public static void main(String[] args){
     //System.out.println("olá mundo");
     Random gen = new Random(1234);
