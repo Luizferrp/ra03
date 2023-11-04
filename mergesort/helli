@@ -1,0 +1,8 @@
+#!/bin/bash
+
+directory=$(basename "$(pwd)")
+cd ..
+javac -d build $directory/*.java;
+cd build;
+java $directory.Main;
+cd ..;
