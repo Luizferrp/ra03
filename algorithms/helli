@@ -2,7 +2,7 @@
 
 directory=$(basename "$(pwd)")
 cd ..
-javac -d build $directory/*.java;
+javac -d build */*.java;
 cd build;
 java $directory.Main;
 cd ..;
