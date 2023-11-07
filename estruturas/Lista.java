@@ -5,11 +5,15 @@ import java.util.Random;
 public class Lista {
   Random gen = new Random(12345);
   private int[] lista;
+  private int[] randlist;
   private int length;
 
   public Lista(int n){
     this.length = n;
     lista = new int[this.length];
+    randlist = new int[this.length];
+    for (int i = 0; i < this.length; i++) { this.randlist[i] = gen.nextInt(n); }
+
   }
   public Lista(int[] n){
     this.lista = n;
@@ -32,12 +36,15 @@ public class Lista {
     return this.length;
   }
   public void fullOfRandom(int n){
-    for (int i = 0; i < this.length; i++) { this.lista[i] = gen.nextInt(n); }
+    for (int i = 0; i < this.length; i++) { this.lista[i] = this.randlist[i]; }
+  }
+  public int[] ret(){
+    return this.lista;
   }
 }
 
-class Main{
-  public static void main(String[] args) {
-    System.out.println("olá mundo");
-  }
-}
+//class Main{
+//  public static void main(String[] args) {
+//    System.out.println("olá mundo");
+//  }
+//}
